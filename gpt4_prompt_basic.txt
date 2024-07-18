@@ -1,0 +1,76 @@
+General Template 1:
+
+Suppose you are {an expert in the interdisciplinary field of chemistry and Al.} Given a set of reactant SMILES (Simplified Molecular Input Line Entry System), your task is {to employ your expertise in the interdisciplinary
+field of chemistry and Al to predict the properties of the molecules based on your knowledge of chemical property prediction.}
+
+Task-specific Template:
+
+Please strictly follow the format, no other information can be provided. Given the SMILES string of a molecule, the task focuses on predicting molecular taste properties, specifically whether a molecule is sweet or bitter, based on the SMILES string representation of each molecule.You will be provided with several example molecules, each accompanied by a binary label indicating whether the molecule is sweet (1) or bitter (0). Please answer with only 1 or 0
+
+======================================================================
+Format:
+
+I will give you the answer template. 
+
+Example 1:
+if I give you a question as follows: 
+Q.
+smiles: N[C@@Н](CCC(=O)N[C@@H](C1cc(O)c1)C(=O)O)C(=O)O
+sweet_or_bitter: 
+
+then you answer as follows:
+A.
+sweet_or_bitter 1 (sweet)
+
+======================================================================
+
+Example 2:
+Q.
+smiles: CCOCCc1ccccn1
+sweet_or_bitter: 
+
+A.
+sweet_or_bitter: 0 (bitter)
+
+======================================================================
+
+Then I will give you training datas as examples. Then you should train this.
+
+======================================================================
+ICL:
+smiles: N[C@@Н](CCC(=O)N[C@@H](C1cc(O)c1)C(=O)O)C(=O)O
+sweet_or_bitter: 1
+smiles: OO
+sweet_or bitter: 1
+smiles: O=(=O|O-1)c1ccccc1O.[Na+]
+sweet_or_bitter: 1
+smiles: C1CCNC1
+sweet_or_bitter: 1
+
+======================================================================
+
+Q.
+smiles: Oc1ccc(cc1)C(=O)c1ccccc1C(=O)O
+sweet_or_bitter: 
+
+======================================================================
+multiple prediction:
+
+can you fill the blanks of answers of multiple questions as follows: 
+
+Q. 
+smiles: Oc1ccc(cc1)C(=O)c1ccccc1C(=O)O
+sweet_or_bitter: 
+
+smiles: COc1ccc(cc1O)C1COc2c(C1)cccc2
+sweet_or_bitter: 
+
+then you answer it as follows:
+
+A.
+1. sweet_or_bitter:
+2. sweet_or_bitter:
+======================================================================
+
+Generation:
+Please identify the characteristics of the bitter and sweet taste molecules based on their SMILES (Simplified Molecular InputLineEntrySystem) representations, as previously provided. Then, following the structure and features of the previously given bitter and sweet molecules’ SMILES structures, generate new SMILES representations for bitter and sweet taste molecules.

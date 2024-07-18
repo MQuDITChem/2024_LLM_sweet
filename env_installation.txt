@@ -1,0 +1,39 @@
+## ref link: https://novelism.co.kr/5
+## tested in ubuntu 20.04
+
+## prerequisites: mamba, autodock, mgltools, qvina
+## qvina: https://github.com/QVina/qvina
+#### git clone https://github.com/QVina/qvina.git (in download folder)
+#### mgltools link: http://mgltools.scripps.edu/downloads
+
+# ============================================================================================================
+#####################
+###### README #######
+#####################
+# 1. fix some mgltools scripts
+ need to change the "mgltools_x86_64Linux2_1.5.7/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py"
+ line 104: ligand_filename = os.path.basename(a) -> ligand_filename = a
+
+# ============================================================================================================
+#########################
+###### Python Env #######
+#########################
+
+## install miniforge3
+# ref: https://velog.io/@euisuk-chung/Conda-Miniconda-그리고-Miniforge를-이용한-분석-환경-설정하기-OS-Ubuntu
+
+# create a new environment with python 3.10 (mamba is faster than conda) 
+mamba create -n swllm python=3.10 -y
+
+# activate the environment
+mamba activate swllm
+
+# install the required packages
+mamba install -c conda-forge rdkit -y
+mamba install -c conda-forge pymol-open-source -y
+mamba install -c conda-forge openbabel -y
+
+pip install ipykernel
+pip install py3dmol
+pip install scipy
+

@@ -5,8 +5,10 @@ Paper reference: https://doi.org/10.1021/acs.jcim.4c00681
 data reference: https://github.com/cosylabiiit/bittersweet/tree/master/data
 
 ### Files
-env_installation.txt: 간단한 환경설정
+env_installation.txt: 간단한 환경설정   
 gpt4_prompt_basic.txt: gpt4 에 사용한 프롬프트들 
+
+code/1.prepare_data.ipynb: random method 에 사용할 데이터 생성   
 
 ### Done:
 Random method

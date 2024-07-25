@@ -33,7 +33,4 @@ mamba install -c conda-forge rdkit -y
 mamba install -c conda-forge pymol-open-source -y
 mamba install -c conda-forge openbabel -y
 
-pip install ipykernel
-pip install py3dmol
-pip install scipy
-
+pip install ipykernel py3dmol scipy seaborn
